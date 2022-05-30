@@ -36,6 +36,15 @@ export default {
             to: [{type: "collection"}]
         },
         {
+            title: 'Link',
+            name: 'href',
+            type: 'url',
+            description: "Link do kreatora wnętrz",
+            validation: Rule => Rule.uri({
+                scheme: ['http', 'https', 'mailto', 'tel']
+            })
+        },
+        {
             name: "featuredImage",
             type: "image",
             title: "Featured Image",

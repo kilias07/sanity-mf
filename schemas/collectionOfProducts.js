@@ -17,6 +17,19 @@ export default {
             of: [{type: "block"}]
         },
         {
+            name: "slug",
+            type: "slug",
+            title: "Slug",
+            description: "Generuj link",
+            options: {
+                source: "title",
+                slugify: input => input
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .slice(0, 200)
+            }
+        },
+        {
             name: "featuredImage",
             type: 'image',
             title: "Image",
@@ -33,6 +46,12 @@ export default {
             options: {
                 hotspot: true,
             }
+        },
+        {
+            title: 'Wodoodporność',
+            description: "Odporność na wodę?",
+            name: 'waterproof',
+            type: 'boolean'
         },
         {
             name: "properties",
@@ -59,8 +78,18 @@ export default {
                             title: "Package",
                             description: "paczka",
                             fields: [
-                                {name: "square", type: "number", title: "Square meters", description: "metry kwadratowe"},
-                                {name: "numberOfBoards", type: "number", title: "Number of Boards", description: "ilość sztuk paneli w paczce"}
+                                {
+                                    name: "square",
+                                    type: "number",
+                                    title: "Square meters",
+                                    description: "metry kwadratowe"
+                                },
+                                {
+                                    name: "numberOfBoards",
+                                    type: "number",
+                                    title: "Number of Boards",
+                                    description: "ilość sztuk paneli w paczce"
+                                }
                             ]
                         },
                         {
@@ -69,8 +98,15 @@ export default {
                             title: "Abrassion",
                             description: "klasa ścieralności",
                             fields: [
-                                {name: "abrassion", type: "string", title: "Abrassion", description: "klasa ścieralności", options: {
-                                        list: ["AC4/32","AC5/32","AC5/33"]}}
+                                {
+                                    name: "abrassion",
+                                    type: "string",
+                                    title: "Abrassion",
+                                    description: "klasa ścieralności",
+                                    options: {
+                                        list: ["AC4/32", "AC5/32", "AC5/33"]
+                                    }
+                                }
                             ]
                         }
                     ]

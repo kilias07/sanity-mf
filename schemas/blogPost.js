@@ -23,17 +23,19 @@ export default {
             }
         },
         {
+            name: "shortDescription",
+            title: "Short Description",
+            type: "text",
+            description: "krótki opis do karty (modala)",
+            validation: Rule => Rule.required().min(10).max(250)
+
+        },
+        {
             name: "description",
             type: "array",
             title: "Description",
             description: "Tekst artykułu",
             of: [{type: "block"}]
-        },
-        {
-            name: "category",
-            type: "reference",
-            title: "Category of blog",
-            to: [{type: "category"}],
         },
         {
             name: "featuredImage",
@@ -43,6 +45,12 @@ export default {
             options: {
                 hotspot: true,
             }
+        },
+        {
+            name: "mainPage",
+            type: "boolean",
+            title: "Main Page",
+            description: "dodaj na stronę główną",
         },
     ]
 }

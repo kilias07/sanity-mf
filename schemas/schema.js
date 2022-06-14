@@ -10,6 +10,8 @@ import certificateMainPage from "./certificateMainPage";
 import shopsLogosMainPage from "./shopsLogosMainPage";
 import heroSection from "./heroSection";
 import geoPoints from "./geoPoints";
+import download from "./download";
+import usage from "./usage";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +26,8 @@ export default createSchema({
         certificateMainPage,
         heroSection,
         shopsLogosMainPage,
-        geoPoints
+        geoPoints,
+        download,
+        usage
     ]),
 })

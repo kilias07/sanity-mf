@@ -1,6 +1,7 @@
 export default {
-    name: "posts",
-    title: "Posts",
+    name: "usage",
+    title: "Usage",
+    description: "Zastosowanie",
     type: "document",
     fields: [
         {
@@ -34,7 +35,14 @@ export default {
             type: "array",
             title: "Description",
             description: "Tekst artykułu",
-            of: [{type: "block"}]
+            of: [
+                {
+                    type: "block",
+                },
+                {
+                    type: 'image',
+                }
+            ]
         },
         {
             name: "featuredImage",

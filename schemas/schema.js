@@ -12,6 +12,7 @@ import heroSection from "./heroSection";
 import geoPoints from "./geoPoints";
 import download from "./download";
 import usage from "./usage";
+import accessories from "./accessories";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,6 +29,7 @@ export default createSchema({
         shopsLogosMainPage,
         geoPoints,
         download,
-        usage
+        usage,
+        accessories
     ]),
 })
